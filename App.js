@@ -18,6 +18,7 @@ async function getPokemon(num) {
   let url = "https://pokeapi.co/api/v2/pokemon/" + num.toString();
   let res = await fetch(url);
   let pokemon = await res.json();
+  console.log(pokemon);
   let pokemonName = pokemon["name"];
   let pokemonType = pokemon["types"];
   let pokemonImg = pokemon["sprites"]["front_default"];
@@ -30,15 +31,14 @@ async function getPokemon(num) {
     types: pokemonType,
     desc: pokemonDesc,
   };
- 
-}
-serchForm.addEventListener("submit", event => {
+  serchForm.addEventListener("submit", (event) => {
     event.preventDefault();
     const pokemonSubmit = document.getElementById("serch-input").value;
     getPokemon(pokemonSubmit);
-    console.log(pokemonSubmit);
-})
-
+    document.getElementById("type-box").appendChild(pokemon);
+    document.getElementById("pokemon-description").appendChild(pokemon);
+  });
+}
 
 
 function updatePokemon() {
@@ -57,6 +57,4 @@ function updatePokemon() {
   }
   document.getElementById("pokemon-description").innerText =
     pokedex[this.id]["desc"];
-    
 }
-    
