@@ -1,38 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html lang="it">
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>pokèdex</title>
+    <title>pokedex</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="/favicon-16x16.png" />
   </head>
   <body>
-    <div id="content-box">
-      <div id="pokemon-info">
-        <form id="serch-form">
-          <input type="text" id="serch-input" placeholder="Inserisci il nome del pokèmon" />
-          <button type="submit">Cerca</button>
-        </form>
-        <img
-          id="pokemon-img"
-          src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"
-          alt="img pokemon"
+    <main>
+      <img
+        src="#"
+        alt="pokemon"
+        class="pokemon__image"
+      />
+      <h1 class="pokemon__data">
+        <span class="pokemon__number"></span> -
+        <span class="pokemon__name"></span>
+      </h1>
+      <form class="form">
+        <input
+          type="search"
+          class="input__serch"
+          placeholder="Name or Number"
+          required
         />
-        <div id="pokemon-types">
-          <span class="type-box grass">GRASS</span>
-          <span class="type-box poison">POISON</span>
-        </div>
-        <div id="pokemon-description">
-          È possibile vedere Bulbasaur mentre schiaccia un pisolino <br />
-          sotto il sole. Ha un seme piantato sulla schiena. Grazie ai <br />
-          raggi solari il seme cresce ingrandendosi progressivamente.
-        </div>
+      </form>
+      <div class="buttons">
+        <button class="button btn-prev">Prev &lt;</button>
+        <button class="button btn-next">Next &gt;</button>
       </div>
-      <div id="pokemon-list"></div>
-    </div>
+      <img src="/pokedex.png" alt="pokemon" class="pokedex" />
+    </main>
+    <span class="types">tipo</span>
 
-    <script src="App.js" async defer></script>
+    <script src="script.js" async defer></script>
   </body>
 </html>
