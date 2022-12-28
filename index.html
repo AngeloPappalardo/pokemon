@@ -11,15 +11,20 @@
   </head>
   <body>
     <main>
-      <img
-        src="#"
-        alt="pokemon"
-        class="pokemon__image"
-      />
+      <img src="#" alt="pokemon" class="pokemon__image" />
       <h1 class="pokemon__data">
         <span class="pokemon__number"></span> -
         <span class="pokemon__name"></span>
       </h1>
+      <div class="types__container">
+        <span class="types"></span>
+       <span class="type"></span>
+      </div>
+      <div class="damage">
+        <p>hp: <span class="hp"></span></p>
+        <p>attack: <span class="attack"></span></p>
+        <p>defense: <span class="defense"></span></p>
+      </div>
       <form class="form">
         <input
           type="search"
@@ -34,7 +39,6 @@
       </div>
       <img src="/pokedex.png" alt="pokemon" class="pokedex" />
     </main>
-    <span class="types">tipo</span>
 
     <script src="script.js" async defer></script>
   </body>
